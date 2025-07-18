@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Architecture Parking Intelligent">
+    <mxGraphModel dx="1296" dy="784" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Caméras IP -->
+        <mxCell id="2" value="Caméras IP / RTSP" style="rounded=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="180" y="40" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Module YOLO -->
+        <mxCell id="3" value="Module YOLO (Détection véhicules)" style="rounded=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="180" y="140" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Module OCR / LPR -->
+        <mxCell id="4" value="Module OCR / LPR" style="rounded=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="240" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Vérification événements -->
+        <mxCell id="5" value="Vérification des événements" style="rounded=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="300" y="240" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <!-- API Backend -->
+        <mxCell id="6" value="API Backend (Django REST / FastAPI)" style="rounded=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="180" y="340" width="300" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Base de données -->
+        <mxCell id="7" value="Base de données (PostgreSQL)" style="rounded=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="180" y="460" width="250" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Frontend Web -->
+        <mxCell id="8" value="Frontend Web (Angular)" style="rounded=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="580" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Frontend Mobile -->
+        <mxCell id="9" value="Frontend Mobile (optionnel)" style="rounded=1;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="300" y="580" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Flèches -->
+        <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitPerimeter=1;entryX=0.5;entryY=0;entryPerimeter=1" edge="1" parent="1" source="2" target="3">
+          <mxGeometry width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitPerimeter=1;entryX=0.5;entryY=0;entryPerimeter=1" edge="1" parent="1" source="3" target="4">
+          <mxGeometry width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitPerimeter=1;entryX=0.5;entryY=0;entryPerimeter=1" edge="1" parent="1" source="3" target="5">
+          <mxGeometry width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitPerimeter=1;entryX=0.5;entryY=1;entryPerimeter=1" edge="1" parent="1" source="4" target="6">
+          <mxGeometry width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitPerimeter=1;entryX=0.5;entryY=1;entryPerimeter=1" edge="1" parent="1" source="5" target="6">
+          <mxGeometry width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitPerimeter=1;entryX=0.5;entryY=0;entryPerimeter=1" edge="1" parent="1" source="6" target="7">
+          <mxGeometry width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitPerimeter=1;entryX=1;entryY=0.5;entryPerimeter=1" edge="1" parent="1" source="6" target="8">
+          <mxGeometry width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1" edge="1" parent="1" source="6" target="9">
+          <mxGeometry width="50" height="50" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
