@@ -9,6 +9,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './src/screens/Auth/LoginScreen';
 import RegisterScreen from './src/screens/Auth/RegisterScreen';
 import HomeScreen from './src/screens/Home/HomeScreen';
+import ParkingScreen from './src/screens/Parking/ParkingScreen';
+import DetailParkingScreen from './src/screens/Parking/DetailParkingScreen';
+import OnboardingScreen from './src/screens/Home/OnboardingScreen';
 import PaymentScreen from './src/screens/Payment/PaymentScreen';
 import HistoriqueScreen from './src/screens/History/HistoriqueScreen'
 import { enableScreens } from 'react-native-screens';
@@ -21,7 +24,8 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="HomeTabs">
+      <Stack.Navigator initialRouteName="Onboarding">
+        <Stack.Screen name="Onboarding" component={OnboardingScreen} options={{ headerShown: false }}  />
         <Stack.Screen name="HomeTabs" component={HomeTabs} options={{ headerShown: false }} />
         <Stack.Screen 
           name="Login" 
@@ -73,7 +77,7 @@ function HomeTabs() {
       })}
     >
       <Tab.Screen name="HomeTab" component={HomeScreen} options={{ title: 'Accueil' }} />
-      <Tab.Screen name="Historique" component={HistoriqueScreen} />
+      <Tab.Screen name="Historique" component={DetailParkingScreen} />
       <Tab.Screen name="Payment" component={PaymentScreen} />
     </Tab.Navigator>
   );

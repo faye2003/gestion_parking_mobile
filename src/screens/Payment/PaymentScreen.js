@@ -22,12 +22,8 @@ export default function PaymentScreen() {
   const price = 1000; // Exemple montant dynamique calculé
 
   return (
-    // <ImageBackground
-    //   source={{ uri: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be' }}
-    //   style={styles.background}
-    // >
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.title}>Confirmez le stationnement</Text>
+        <Text style={styles.title}>Confirmez le Paiement</Text>
 
         {/* Card 1 : Parking info */}
         <View style={styles.card}>
@@ -99,12 +95,81 @@ export default function PaymentScreen() {
 
         {/* Bouton confirmer */}
         <TouchableOpacity style={styles.confirmButton}>
-          <Text style={styles.confirmButtonText}>CONFIRMER LE STATIONNEMENT</Text>
+          <Text style={styles.confirmButtonText}>CONFIRMER LE PAIEMENT</Text>
         </TouchableOpacity>
       </ScrollView>
-    // </ImageBackground>
   );
 }
+
+// const styles = StyleSheet.create({
+//   background: {
+//     flex: 1,
+//     resizeMode: 'cover',
+//   },
+//   container: {
+//     padding: 16,
+//   },
+//   title: {
+//     textAlign: 'center',
+//     fontSize: 18,
+//     color: '#2e2f45',
+//     fontWeight: 'bold',
+//     marginVertical: 16,
+//   },
+//   card: {
+//     backgroundColor: '#ffffffcc',
+//     borderRadius: 12,
+//     padding: 12,
+//     marginBottom: 14
+//   },
+//   row: {
+//     flexDirection: 'row',
+//     alignItems: 'center',
+//   },
+//   cardContent: {
+//     flex: 1,
+//     marginLeft: 8,
+//   },
+//   cardTitle: {
+//     fontWeight: 'bold',
+//     color: '#2e2f45',
+//   },
+//   cardSubtitle: {
+//     fontSize: 12,
+//     color: '#2e2f45',
+//   },
+//   expiration: {
+//     fontSize: 18,
+//     fontWeight: 'bold',
+//     color: '#2e2f45',
+//   },
+//   amount: {
+//     fontSize: 18,
+//     fontWeight: 'bold',
+//     color: '#2e2f45',
+//   },
+//   sectionLabel: {
+//     fontSize: 14,
+//     color: '#2e2f45',
+//     marginBottom: 4,
+//     fontWeight: '500',
+//   },
+//   picker: {
+//     backgroundColor: '#fff',
+//     borderRadius: 8,
+//   },
+//   confirmButton: {
+//     backgroundColor: '#84ab4c',
+//     paddingVertical: 14,
+//     borderRadius: 8,
+//     alignItems: 'center',
+//     marginTop: 8,
+//   },
+//   confirmButtonText: {
+//     color: '#fff',
+//     fontWeight: 'bold',
+//   },
+// });
 
 const styles = StyleSheet.create({
   background: {
@@ -124,13 +189,13 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#ffffffcc',
     borderRadius: 12,
-    padding: 14,
+    padding: 12,
     marginBottom: 14,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.15,
     shadowRadius: 4,
-    elevation: 4, // Ombre sur Android
+    elevation: 4,
   },
   row: {
     flexDirection: 'row',

@@ -2,11 +2,12 @@ import React from 'react';
 import { View, Text, StyleSheet, ImageBackground, TextInput, TouchableOpacity, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import Logo from '../../assets/logo-icon.png';
+import Background from '../../assets/bg3.png';
 
 export default function HomeScreen({ navigation }) {
   return (
     <ImageBackground
-      source={{ uri: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be' }} // Remplace par ton image
+      source={Background} // Remplace par ton image
       style={styles.background}
     >
       {/* Header */}
@@ -18,9 +19,9 @@ export default function HomeScreen({ navigation }) {
         <Text style={styles.country}>Sénégal</Text>
         <View style={{ flexDirection: 'row' }}>
           <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-            <Icon name="user" size={20} color="#2e2f45" style={{ marginRight: 12 }} />
+            <Icon name="user" size={20} color="#fff" style={{ marginRight: 12 }} />
           </TouchableOpacity>
-          <Icon name="settings" size={20} color="#2e2f45" />
+          <Icon name="settings" size={20} color="#fff" />
         </View>
       </View>
 
@@ -65,11 +66,11 @@ const styles = StyleSheet.create({
   },
   logo: {
     fontSize: 18,
-    color: '#2e2f45',
+    color: '#fff',
     fontWeight: 'bold',
   },
   country: {
-    color: '#2e2f45',
+    color: '#fff',
     fontSize: 14,
   },
   imglogo: {
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 24,
     alignSelf: 'center',
-    backgroundColor: '#ffffffcc',
+    backgroundColor: '#fff',
     padding: 12,
     borderRadius: 12
   },
@@ -123,18 +124,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
   }
 });
-
-// import React from 'react';
-// import { View, Text } from 'react-native';
-
-// export default function HistoriqueScreen() {
-//   return (
-//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//       <Text>Page Historique</Text>
-//     </View>
-//   );
-// }
-
 
 // import React from 'react';
 // import { View, Text, Button } from 'react-native';
