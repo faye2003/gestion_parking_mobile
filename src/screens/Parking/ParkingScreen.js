@@ -4,10 +4,10 @@ import { useNavigation } from '@react-navigation/native';
 
 // ⚠️ Simulons une API pour cet exemple :
 const mockApiData = [
-  { id: '1', name: 'Parking A', spaces: 350, distance: 100, status: 'Open' },
-  { id: '2', name: 'Parking B', spaces: 120, distance: 250, status: 'Closed' },
-  { id: '3', name: 'Parking C', spaces: 85, distance: 350, status: 'Open' },
-  { id: '4', name: 'Parking D', spaces: 400, distance: 500, status: 'Closed' },
+  { id: '1', name: 'Parking A', spaces: 350, distance: 100, status: 'Ouvert' },
+  { id: '2', name: 'Parking B', spaces: 120, distance: 250, status: 'Fermé' },
+  { id: '3', name: 'Parking C', spaces: 85, distance: 350, status: 'Ouvert' },
+  { id: '4', name: 'Parking D', spaces: 400, distance: 500, status: 'Fermé' },
 ];
 
 export default function ParkingScreen() {
@@ -37,7 +37,7 @@ export default function ParkingScreen() {
         <View
           style={[
             styles.statusBadge,
-            item.status === 'Open' ? styles.statusOpen : styles.statusClosed,
+            item.status === 'Ouvert' ? styles.statusOpen : styles.statusClosed,
           ]}
         >
           <Text style={styles.statusText}>{item.status}</Text>

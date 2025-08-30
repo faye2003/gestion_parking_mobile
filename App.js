@@ -77,7 +77,7 @@ function HomeTabs() {
       })}
     >
       <Tab.Screen name="HomeTab" component={HomeScreen} options={{ title: 'Accueil' }} />
-      <Tab.Screen name="Historique" component={DetailParkingScreen} />
+      <Tab.Screen name="Historique" component={HistoriqueScreen} />
       <Tab.Screen name="Payment" component={PaymentScreen} />
     </Tab.Navigator>
   );

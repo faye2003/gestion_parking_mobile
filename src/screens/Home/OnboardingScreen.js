@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, Dimensions } from 'react-native';
+import { PointerType } from 'react-native-gesture-handler';
 
 const { width } = Dimensions.get('window');
 

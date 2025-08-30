@@ -8,6 +8,7 @@ const { width, height } = Dimensions.get('window');
 export default function DetailParkingScreen() {
   const route = useRoute();
   const { parking } = route.params;
+//   console.log(parking);
 
   // Coordonnées mock (remplacer par les vraies données de l'API si dispo)
   const location = {
