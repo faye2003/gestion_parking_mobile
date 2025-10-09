@@ -7,15 +7,46 @@ buildscript {
         ndkVersion = "27.1.12297006"
         kotlinVersion = "2.1.20"
     }
+
     repositories {
         google()
         mavenCentral()
     }
+
     dependencies {
-        classpath("com.android.tools.build:gradle")
+        // ✅ Ajoute une version explicite pour le plugin Gradle Android
+        classpath('com.android.tools.build:gradle:8.11.2')
+
+        // ✅ Plugin React Native (le bon chemin)
         classpath("com.facebook.react:react-native-gradle-plugin")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+
+        // ✅ Plugin Kotlin avec version définie
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
     }
 }
 
+// ✅ Important : ne pas oublier cette ligne, c’est ce qui permet à React Native de gérer le projet Android
 apply plugin: "com.facebook.react.rootproject"
+
+
+// buildscript {
+//     ext {
+//         buildToolsVersion = "35.0.0"
+//         minSdkVersion = 24
+//         compileSdkVersion = 35
+//         targetSdkVersion = 35
+//         ndkVersion = "27.1.12297006"
+//         kotlinVersion = "2.1.20"
+//     }
+//     repositories {
+//         google()
+//         mavenCentral()
+//     }
+//     dependencies {
+//         classpath("com.android.tools.build:gradle")
+//         classpath("com.facebook.react:react-native-gradle-plugin")
+//         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+//     }
+// }
+
+// apply plugin: "com.facebook.react.rootproject"
